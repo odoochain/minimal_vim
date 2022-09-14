@@ -13,18 +13,36 @@ The config is tested in Vim 7.4, Vim 8.0 and Nvim 0.4.0.
 
 # How to use
 
-## For Neovim
+## On Unix systems
+
+### For Neovim
 
 To use this config for Neovim, use the following command:
 
 ```bash
 mkdir -p ~/.config/nvim && cd ~/.config/nvim
-git clone https://github.com/jdhao/minimal_vim.git .
+git clone https://github.com/mino29/minimal_vim.git .
 ```
 
-## For Vim
+### For Vim
 
 ```bash
 mkdir -p ~/.vim && cd ~/.vim
-git clone https://github.com/jdhao/minimal_vim.git .
+git clone https://github.com/mino29/minimal_vim.git .
+```
+
+## On Windows
+
+### For Neovim
+
+``` powershell
+mkdir -p $env:LOCALAPPDATA\nvim && cd $env:LOCALAPPDATA\nvim
+git clone https://github.com/mino29/minimal_vim.git .
+```
+
+### For Vim
+
+``` powershell
+mkdir -p $home\.vim && cd $home\.vim
+git clone https://github.com/mino29/minimal_vim.git .
 ```

@@ -91,7 +91,7 @@ set cursorline
 set colorcolumn=80
 
 " Minimum lines to keep above and below cursor when scrolling
-set scrolloff=3
+set scrolloff=15
 
 " Use mouse to select and resize windows, etc.
 if has('mouse')
@@ -293,9 +293,9 @@ augroup END
 augroup resume_edit_position
     autocmd!
     autocmd BufReadPost *
-        \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
-        \ | execute "normal! g`\"zvzz"
-        \ | endif
+                \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+                \ | execute "normal! g`\"zvzz"
+                \ | endif
 augroup END
 
 " Display a message when the current file is not in utf-8 format.
@@ -311,8 +311,8 @@ augroup END
 augroup vimfile_setting
     autocmd!
     autocmd FileType vim setlocal foldmethod=expr foldlevel=0 foldlevelstart=-1
-    \ foldexpr=VimFolds(v:lnum) foldtext=MyFoldText()
-    \ keywordprg=:help formatoptions-=o formatoptions-=r
+                \ foldexpr=VimFolds(v:lnum) foldtext=MyFoldText()
+                \ keywordprg=:help formatoptions-=o formatoptions-=r
 augroup END
 
 augroup number_toggle
@@ -447,7 +447,7 @@ inoremap <expr> <tab>  pumvisible()?"\<C-n>":"\<tab>"
 " Edit and reload init.vim quickly
 nnoremap <silent> <leader>ev :edit $MYVIMRC<cr>
 nnoremap <silent> <leader>sv :silent update $MYVIMRC <bar> source $MYVIMRC <bar>
-    \ echomsg "Nvim config successfully reloaded!"<cr>
+            \ echomsg "Nvim config successfully reloaded!"<cr>
 
 " Reselect the text that has just been pasted
 nnoremap <leader>v `[V`]
@@ -486,7 +486,7 @@ nnoremap <silent> <leader><Space> :call StripTrailingWhitespaces()<CR>
 
 " Clear highlighting
 if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+    nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 endif
 
 nnoremap <up> :echoerr "Don't use arrow keys, use H, J, K, L instead!"<CR>
@@ -637,16 +637,16 @@ call matchadd("Warnings", '^\t\+')
 
 " statusline settings
 let g:currentmode={
-       \ 'n'  : 'NORMAL ',
-       \ 'v'  : 'VISUAL ',
-       \ 'V'  : 'V·Line ',
-       \ "\<C-V>" : 'V·Block ',
-       \ 'i'  : 'INSERT ',
-       \ 'R'  : 'R ',
-       \ 'Rv' : 'V·Replace ',
-       \ 'c'  : 'Command ',
-       \ 't'  : 'TERMINAL'
-       \}
+            \ 'n'  : 'NORMAL ',
+            \ 'v'  : 'VISUAL ',
+            \ 'V'  : 'V·Line ',
+            \ "\<C-V>" : 'V·Block ',
+            \ 'i'  : 'INSERT ',
+            \ 'R'  : 'R ',
+            \ 'Rv' : 'V·Replace ',
+            \ 'c'  : 'Command ',
+            \ 't'  : 'TERMINAL'
+            \}
 
 set statusline=
 set statusline+=%1*
@@ -699,13 +699,13 @@ set statusline+=%{StatuslineTabWarning()}
 augroup check_trailing_space
     autocmd!
     autocmd CursorHold,BufWritePost * unlet! b:statusline_trailing_space_warning
-        \ | let &statusline=&statusline
+                \ | let &statusline=&statusline
 augroup END
 
 augroup check_mixed_tabs
     autocmd!
     autocmd CursorHold,BufWritePost * unlet! b:statusline_tab_warning
-        \ | let &statusline=&statusline
+                \ | let &statusline=&statusline
 augroup END
 
 " Find if trailing spaces exist.
