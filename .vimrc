@@ -243,7 +243,8 @@ endfunction
 "}
 
 "{ Variables
-let mapleader = ','
+let mapleader = ' '
+
 
 " Do not load netrw by default since I do not use it, see
 " https://github.com/bling/dotvim/issues/4

@@ -27,8 +27,7 @@ cp .vimrc $home/.vimrc
 
 ### For Neovim/Vim
 
+**One line Install**
 ``` powershell
-mkdir -p $env:LOCALAPPDATA\nvim
-git clone https://github.com/mino29/minimal_vim.git $env:LOCALAPPDATA\nvim
-cp .vimrc $home\.vimrc
+Invoke-WebRequest https://raw.githubusercontent.com/mino29/minimal_vim/master/utils/install.ps1 -UseBasicParsing | Invoke-Expression
 ```
