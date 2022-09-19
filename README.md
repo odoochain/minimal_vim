@@ -23,7 +23,7 @@ git clone https://github.com/mino29/minimal_vim.git .
 cp .vimrc $home/.vimrc
 ```
 
-## 🪟 On Windows
+## ⏹ On Windows
 
 ### For Neovim/Vim
 
