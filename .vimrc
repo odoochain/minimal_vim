@@ -357,8 +357,8 @@ nnoremap <silent> <leader>q :x<CR>
 nnoremap <silent> <leader>Q :qa<CR>
 
 " Navigate buffers
-nnoremap <silent>l :bnext<CR>
-nnoremap <silent>l :bprevious<CR>
+nnoremap <S-l> :bnext<CR>
+nnoremap <S-h> :bprevious<CR>
 
 " Better window navigation 
 nnoremap <C-h> <C-w>h
