@@ -24,7 +24,7 @@ if !has('nvim')
 endif
 
 " Use English as default
-language en_US.utf-8
+" language en_US.utf-8
 
 filetype plugin indent on
 syntax enable
@@ -133,7 +133,9 @@ set foldlevel=0
 set history=500
 
 " Use list mode and customized listchars
-set list listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:+
+" set list listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:+
+
+set listchars=tab:\ \ ┊,trail:●,extends:»,precedes:«,nbsp:×,space:·,eol:↓
 
 " Auto-write the file based on some condition
 set autowrite
@@ -354,6 +356,16 @@ nnoremap <silent> <leader>q :x<CR>
 " Quit all opened buffers
 nnoremap <silent> <leader>Q :qa<CR>
 
+" Navigate buffers
+map <S-l> :bnext<CR>
+map <S-h> :bprevious<CR>
+
+" Better window navigation 
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 " Navigation in the location and quickfix list
 nnoremap [l :lprevious<CR>zv
 nnoremap ]l :lnext<CR>zv
@@ -373,7 +385,7 @@ nnoremap<silent> \x :windo lclose <bar> cclose<CR>
 nnoremap <silent> \d :bprevious <bar> bdelete #<CR>
 
 " Toggle search highlight, see https://stackoverflow.com/q/9054780/6064933
-nnoremap <silent><expr> <Leader>hl (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
+nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
 " Insert a blank line below or above current line (do not move the cursor),
 " see https://stackoverflow.com/a/16136133/6064933
