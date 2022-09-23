@@ -357,14 +357,14 @@ nnoremap <silent> <leader>q :x<CR>
 nnoremap <silent> <leader>Q :qa<CR>
 
 " Navigate buffers
-nnoremap <S-l> :bnext<CR>
-nnoremap <S-h> :bprevious<CR>
+map <S-l> :bnext<CR>
+map <S-h> :bprevious<CR>
 
 " Better window navigation 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " Navigation in the location and quickfix list
 nnoremap [l :lprevious<CR>zv
