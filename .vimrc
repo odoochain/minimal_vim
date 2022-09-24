@@ -135,7 +135,7 @@ set history=500
 " Use list mode and customized listchars
 " set list listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:+
 
-set listchars=tab:\ \ ┊,trail:●,extends:»,precedes:«,nbsp:×,space:·,eol:↓
+set list listchars=tab:\ \ ┊,trail:●,extends:»,precedes:«,nbsp:×,space:·,eol:↓
 
 " Auto-write the file based on some condition
 set autowrite
@@ -250,7 +250,7 @@ let mapleader = ' '
 
 " Do not load netrw by default since I do not use it, see
 " https://github.com/bling/dotvim/issues/4
-let g:loaded_netrwPlugin = 1
+let g:loaded_netrwPlugin = 0
 
 " Do not load tohtml.vim
 let g:loaded_2html_plugin = 1
