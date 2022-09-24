@@ -326,8 +326,8 @@ augroup END
 "}
 
 " save fold(s) and load folds automatically
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+" autocmd BufWinLeave *.* mkview
+" autocmd BufWinEnter *.* silent loadview
 
 "{ Custom key mappings
 " Save key strokes (now we do not need to press shift to enter command mode).
