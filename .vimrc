@@ -325,6 +325,10 @@ augroup number_toggle
 augroup END
 "}
 
+" save fold(s) and load folds automatically
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 "{ Custom key mappings
 " Save key strokes (now we do not need to press shift to enter command mode).
 " Vim-sneak has also mapped `;`, so using the below mapping will break the map
