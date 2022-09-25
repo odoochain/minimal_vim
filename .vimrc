@@ -361,8 +361,8 @@ nnoremap <silent> <leader>q :x<CR>
 nnoremap <silent> <leader>Q :qa<CR>
 
 " Navigate buffers
-map <S-l> :bnext<CR>
-map <S-h> :bprevious<CR>
+map L :bnext<CR>
+map H :bprevious<CR>
 
 " Better window navigation 
 map <C-h> <C-w>h
@@ -425,10 +425,10 @@ xnoremap $ g_
 nnoremap <Tab> %
 
 " Go to start or end of line easier
-nnoremap H ^
-xnoremap H ^
-nnoremap L g_
-xnoremap L g_
+" nnoremap H ^
+" xnoremap H ^
+" nnoremap L g_
+" xnoremap L g_
 
 " Resize windows using <Alt> and h,j,k,l, inspiration from
 " https://vim.fandom.com/wiki/Fast_window_resizing_with_plus/minus_keys (bottom page).
