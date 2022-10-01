@@ -480,6 +480,11 @@ xnoremap <C-H> :s/
 " see https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
 nnoremap <silent> <leader>cd :lcd %:p:h<CR>:pwd<CR>
 
+
+" Open terminal with a horizontal split
+nnoremap <leader>t :split<CR>:ter<CR>
+
+
 " Use Esc to quit builtin terminal
 if exists(':tnoremap')
     tnoremap <ESC>   <C-\><C-n>
