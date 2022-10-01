@@ -250,7 +250,36 @@ let mapleader = ' '
 
 " Do not load netrw by default since I do not use it, see
 " https://github.com/bling/dotvim/issues/4
-let g:loaded_netrwPlugin = 0
+" let g:loaded_netrwPlugin = 0
+
+" Hide banner
+let g:netrw_banner = 0
+
+" toggle netrw with custom keymap
+let g:NetrwIsOpen=0
+
+" fixed size
+let g:netrw_winsize = 20
+
+function! ToggleNetrw()
+    if g:NetrwIsOpen
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i 
+            endif
+            let i-=1
+        endwhile
+        let g:NetrwIsOpen=0
+    else
+        let g:NetrwIsOpen=1
+        silent Lexplore
+    endif
+endfunction
+
+" Add your own mapping. For example:
+" nnoremap <leader>e :Ex<CR>
+nnoremap <leader>e :call ToggleNetrw()<CR>
 
 " Do not load tohtml.vim
 let g:loaded_2html_plugin = 1
