@@ -54,6 +54,22 @@ set updatetime=800
 set clipboard+=unnamed
 set clipboard+=unnamedplus
 
+
+let g:clipboard = {
+\ 'name': 'win32yank',
+\ 'copy': {
+\ '+': 'win32yank.exe -i --crlf',
+\ '*': 'win32yank.exe -i --crlf',
+\ },
+\ 'paste': {
+\ '+': 'win32yank.exe -o --lf',
+\ '*': 'win32yank.exe -o --lf',
+\ },
+\ 'cache_enabled': 0,
+\ }
+
+set termguicolors
+
 " Disable creating swapfiles, see https://stackoverflow.com/q/821902/6064933
 set noswapfile
 
@@ -337,6 +353,9 @@ augroup END
 " autocmd BufWinLeave *.* mkview !
 " autocmd BufWinEnter *.* silent loadview
 
+" automatically removing all trailling whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 "{ Custom key mappings
 " Save key strokes (now we do not need to press shift to enter command mode).
 " Vim-sneak has also mapped `;`, so using the below mapping will break the map
@@ -372,7 +391,7 @@ nnoremap <silent> <leader>Q :qa<CR>
 map L :bnext<CR>
 map H :bprevious<CR>
 
-" Better window navigation 
+" Better window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
