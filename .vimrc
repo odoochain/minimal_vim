@@ -271,10 +271,32 @@ let mapleader = ' '
 " Hide banner
 let g:netrw_banner = 0
 
-" " toggle netrw with custom keymap
-nnoremap <leader>e :Lex 30<CR>
+" treeview
+let g:netrw_liststyle = 3
 
+" toggle netrw with custom keymap
+nnoremap <leader>e :Lex 20<CR>
 
+" highlight file search
+hi! link netrwMarkFile Search
+
+" better keybinds for netrw
+function! NetrwMapping()
+  nmap <buffer> H u
+  nmap <buffer> h -^
+  nmap <buffer> l <CR>
+
+  nmap <buffer> . gh
+  nmap <buffer> P <C-w>z
+
+endfunction
+
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
+
+" https://vonheikemen.github.io/devlog/tools/using-netrw-vim-builtin-file-explorer/
 
 " Do not load tohtml.vim
 let g:loaded_2html_plugin = 1
@@ -386,6 +408,8 @@ nnoremap <silent> <leader>w :update<CR>
 nnoremap <silent> <leader>q :x<CR>
 " Quit all opened buffers
 nnoremap <silent> <leader>Q :qa<CR>
+" Quit current buffer
+nnoremap <silent> <leader>c :bd<CR>
 
 " Navigate buffers
 map L :bnext<CR>
@@ -505,7 +529,7 @@ xnoremap <C-H> :s/
 
 " Change current working directory locally and print cwd after that,
 " see https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
-nnoremap <silent> <leader>cd :lcd %:p:h<CR>:pwd<CR>
+" nnoremap <silent> <leader>cd :lcd %:p:h<CR>:pwd<CR>
 
 
 " Open terminal with a horizontal split
