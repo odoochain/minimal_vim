@@ -14,13 +14,12 @@ The config is tested in Vim 9 and Nvim 0.8.0.
 
 It's just blazingly fast(80ms startup time) with all the sane starter configs.
 
-A Timelss Theme: Gruvbox
-As builtin status line
-Some reasonable autocommands
-No extra dependencies
-Cross-platform compatible(vim/neovim, mac/linux/windows)
-
-(no autocomplete or autoformat or lsp, for obvious reasons)
+- A Timelss Theme: Gruvbox
+- As builtin status line
+- Some reasonable autocommands
+- No extra dependencies
+- Cross-platform compatible(vim/neovim, mac/linux/windows)
+- (no autocomplete or autoformat or lsp, for obvious reasons)
 
 # How to use
 
