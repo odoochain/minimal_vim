@@ -283,8 +283,13 @@ hi! link netrwMarkFile Search
 " better keybinds for netrw
 function! NetrwMapping()
   nmap <buffer> H u
-  nmap <buffer> h -^
+  " nmap <buffer> h -^
   nmap <buffer> l <CR>
+  " Rename
+  nmap <buffer> r R
+  " create a new file
+  nmap <buffer> a %
+  nmap <buffer> d D
 
   nmap <buffer> . gh
   nmap <buffer> P <C-w>z
@@ -830,3 +835,47 @@ endfunction
 " 2. https://gist.github.com/autrimpo/f40e4eda233977dd3a619c6083d9bebd
 " 3. https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f
 "}
+
+
+
+"{ Some essential plugins with vimplug
+
+" different operating systems
+
+
+if has('nvim')
+    echom 'you are using neovim'
+else
+    echom 'you are using vim'
+endif
+"}
+
+let uname = substitute(system('uname'), '\n', '', '')
+" Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
+
+if uname == 'Linux' || uname == 'Darwin'
+    echom 'you are using unix'
+    " do linux/mac command
+else " windows
+    echom 'you are using windows'
+    " do windows command
+endif
+
+
+
+
+" Auto install vimplug and missing plugins
+
+" Install vim-plug if not found
+
+" if empty(glob('~/.vim/autoload/plug.vim'))
+  " silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    " \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" endif
+"
+" " Run PlugInstall if there are missing plugins
+" autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  " \| PlugInstall --sync | source $MYVIMRC
+" \| endif
+
+"Place the following code in your .vimrc before plug#begin() call
