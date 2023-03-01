@@ -843,24 +843,24 @@ endfunction
 " different operating systems
 
 
-if has('nvim')
-    echom 'you are using neovim'
-else
-    echom 'you are using vim'
-endif
-"}
-
-let uname = substitute(system('uname'), '\n', '', '')
-" Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
-
-if uname == 'Linux' || uname == 'Darwin'
-    echom 'you are using unix'
-    " do linux/mac command
-else " windows
-    echom 'you are using windows'
-    " do windows command
-endif
-
+" if has('nvim')
+    " echom 'you are using neovim'
+" else
+    " echom 'you are using vim'
+" endif
+" "}
+"
+" let uname = substitute(system('uname'), '\n', '', '')
+" " Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
+"
+" if uname == 'Linux' || uname == 'Darwin'
+    " echom 'you are using unix'
+    " " do linux/mac command
+" else " windows
+    " echom 'you are using windows'
+    " " do windows command
+" endif
+"
 
 
 
