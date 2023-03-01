@@ -55,18 +55,6 @@ set clipboard+=unnamed
 set clipboard+=unnamedplus
 
 
-let g:clipboard = {
-\ 'name': 'win32yank',
-\ 'copy': {
-\ '+': 'win32yank.exe -i --crlf',
-\ '*': 'win32yank.exe -i --crlf',
-\ },
-\ 'paste': {
-\ '+': 'win32yank.exe -o --lf',
-\ '*': 'win32yank.exe -o --lf',
-\ },
-\ 'cache_enabled': 0,
-\ }
 
 set termguicolors
 
@@ -104,7 +92,7 @@ set wildmode=list:full
 set cursorline
 
 " Set a ruler at column 80, see https://stackoverflow.com/q/2447109/6064933
-set colorcolumn=80
+"set colorcolumn=80
 
 " Minimum lines to keep above and below cursor when scrolling
 set scrolloff=15
@@ -149,7 +137,7 @@ set foldlevel=0
 set history=500
 
 " Use list mode and customized listchars
-" set list listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:+
+" set list listchars=tab:▸\ ,extends:❯,precedes:❮,space:·,nbsp:+
 
 set list listchars=tab:\ \ ┊,trail:●,extends:»,precedes:«,nbsp:×,space:·,eol:↓
 
@@ -861,6 +849,58 @@ endfunction
     " " do windows command
 " endif
 "
+
+if has('nvim')
+    echom 'you are using neovim'
+else
+    echom 'you are using vim'
+endif
+"}
+
+let uname = substitute(system('uname'), '\n', '', '')
+" Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
+
+if uname == 'Linux' || uname == 'Darwin'
+    echom 'you are using unix'
+    " do linux/mac command
+else " windows
+    echom 'you are using windows'
+    " do windows command
+endif
+
+=======
+"
+" if has('nvim')
+    " echom 'you are using neovim'
+" else
+    " echom 'you are using vim'
+" endif
+" "}
+"
+let uname = substitute(system('uname'), '\n', '', '')
+ " Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
+"
+ if uname == 'Linux' || uname == 'Darwin'
+   " echom 'you are using unix'
+   " " do linux/mac command
+ else " windows
+   " echom 'you are using windows'
+   " " do windows command
+    let g:clipboard = {
+    \ 'name': 'win32yank',
+    \ 'copy': {
+    \ '+': 'win32yank.exe -i --crlf',
+    \ '*': 'win32yank.exe -i --crlf',
+    \ },
+    \ 'paste': {
+    \ '+': 'win32yank.exe -o --lf',
+    \ '*': 'win32yank.exe -o --lf',
+    \ },
+    \ 'cache_enabled': 0,
+    \ }
+ endif
+
+>>>>>>> 8cfe04d3f4823d6333b6623647b959178f40a5db
 
 
 
