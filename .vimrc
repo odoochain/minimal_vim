@@ -850,25 +850,13 @@ endfunction
 " endif
 "
 
-if has('nvim')
-    echom 'you are using neovim'
-else
-    echom 'you are using vim'
-endif
+"if has('nvim')
+    "echom 'you are using neovim'
+"else
+    "echom 'you are using vim'
+"endif
 "}
 
-let uname = substitute(system('uname'), '\n', '', '')
-" Example values: Linux, Darwin, MINGW64_NT-10.0, MINGW32_NT-6.1
-
-if uname == 'Linux' || uname == 'Darwin'
-    echom 'you are using unix'
-    " do linux/mac command
-else " windows
-    echom 'you are using windows'
-    " do windows command
-endif
-
-=======
 "
 " if has('nvim')
     " echom 'you are using neovim'
@@ -899,9 +887,6 @@ let uname = substitute(system('uname'), '\n', '', '')
     \ 'cache_enabled': 0,
     \ }
  endif
-
->>>>>>> 8cfe04d3f4823d6333b6623647b959178f40a5db
-
 
 
 " Auto install vimplug and missing plugins
