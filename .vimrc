@@ -565,6 +565,7 @@ nnoremap <left> :echoerr "Don't use arrow keys, use H, J, K, L instead!"<CR>
 "}
 
 "{ UI settings
+set shortmess+=I " Hide intro message
 if !has('gui_running')
     augroup MyColors
         autocmd!
