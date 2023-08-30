@@ -596,11 +596,11 @@ function! MyHighlights() abort
     hi VertSplit guifg=#9BF6FF guibg=NONE gui=NONE
 
     hi ColorColumn guifg=NONE guibg=#323C4E gui=NONE
-    hi Comment guifg=#59C2C1 guibg=NONE gui=italic
+    hi Comment guifg=#C0CAF5 guibg=NONE gui=italic
     hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
     hi Error guifg=#FF8080 guibg=#1F262D gui=bold,reverse
     hi ErrorMsg guifg=#1F262D guibg=#FF8080 gui=bold
-    hi Folded guifg=#59C2C1 guibg=#323C4E gui=italic
+    hi Folded guifg=#C0CAF5 guibg=#323C4E gui=italic
     hi LineNr ctermfg=243 ctermbg=NONE cterm=NONE
     hi MatchParen guifg=NONE guibg=#9BF6FF gui=bold
     hi NonText guifg=#4B5263 guibg=NONE gui=NONE
@@ -608,7 +608,7 @@ function! MyHighlights() abort
     hi PmenuSbar guifg=NONE guibg=#4B5263 gui=NONE
     hi PmenuSel guifg=#4B5263 guibg=#6A1E90 gui=bold
     hi PmenuThumb guifg=NONE guibg=#AEB2BE gui=NONE
-    hi SpecialKey guifg=#59C2C1 guibg=NONE gui=NONE
+    hi SpecialKey guifg=#C0CAF5 guibg=NONE gui=NONE
     hi StatusLine guifg=#4B5263 guibg=#C0CAF5 gui=reverse
     hi StatusLineNC guifg=#323C4E guibg=#FFB84D gui=reverse
     hi TabLine guifg=#AEB2BE guibg=#4B5263 gui=NONE
