@@ -608,7 +608,7 @@ function! MyHighlights() abort
     hi PmenuSbar guifg=NONE guibg=#4B5263 gui=NONE
     hi PmenuSel guifg=#4B5263 guibg=#6A1E90 gui=bold
     hi PmenuThumb guifg=NONE guibg=#AEB2BE gui=NONE
-    hi SpecialKey guifg=#C0CAF5 guibg=NONE gui=NONE
+    hi SpecialKey ctermfg=243 guibg=NONE gui=NONE
     hi StatusLine guifg=#4B5263 guibg=#C0CAF5 gui=reverse
     hi StatusLineNC guifg=#323C4E guibg=#FFB84D gui=reverse
     hi TabLine guifg=#AEB2BE guibg=#4B5263 gui=NONE
