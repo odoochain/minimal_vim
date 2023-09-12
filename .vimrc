@@ -589,14 +589,14 @@ function! MyHighlights() abort
     " The following colors are taken from vim-gruvbox8,
     " link: https://github.com/lifepillar/vim-gruvbox8
 
-    hi Normal guifg=#C0CAF5 guibg=NONE gui=NONE
+    hi Normal ctermfg=253 guibg=NONE gui=NONE
     hi CursorLineNr ctermfg=253 ctermbg=NONE cterm=NONE
     hi FoldColumn guifg=#59C2C1 guibg=NONE gui=NONE
     hi SignColumn guifg=#C0CAF5 guibg=NONE gui=NONE
     hi VertSplit guifg=#9BF6FF guibg=NONE gui=NONE
 
     hi ColorColumn guifg=NONE guibg=#323C4E gui=NONE
-    hi Comment guifg=#C0CAF5 guibg=NONE gui=italic
+    hi Comment ctermfg=243 guibg=NONE gui=italic
     hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
     hi Error guifg=#FF8080 guibg=#1F262D gui=bold,reverse
     hi ErrorMsg guifg=#1F262D guibg=#FF8080 gui=bold
@@ -608,7 +608,7 @@ function! MyHighlights() abort
     hi PmenuSbar guifg=NONE guibg=#4B5263 gui=NONE
     hi PmenuSel guifg=#4B5263 guibg=#6A1E90 gui=bold
     hi PmenuThumb guifg=NONE guibg=#AEB2BE gui=NONE
-    hi SpecialKey guifg=#C0CAF5 guibg=NONE gui=NONE
+    hi SpecialKey ctermfg=243 guibg=NONE gui=NONE
     hi StatusLine guifg=#4B5263 guibg=#C0CAF5 gui=reverse
     hi StatusLineNC guifg=#323C4E guibg=#FFB84D gui=reverse
     hi TabLine guifg=#AEB2BE guibg=#4B5263 gui=NONE
