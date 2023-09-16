@@ -603,7 +603,7 @@ function! MyHighlights() abort
     hi Folded guifg=#C0CAF5 guibg=#323C4E gui=italic
     hi LineNr ctermfg=243 ctermbg=NONE cterm=NONE
     hi MatchParen guifg=NONE guibg=#9BF6FF gui=bold
-    hi NonText guifg=#4B5263 guibg=NONE gui=NONE
+    hi NonText ctermfg=243 guibg=NONE gui=NONE
     hi Pmenu guifg=#C0CAF5 guibg=#4B5263 gui=NONE
     hi PmenuSbar guifg=NONE guibg=#4B5263 gui=NONE
     hi PmenuSel guifg=#4B5263 guibg=#6A1E90 gui=bold
