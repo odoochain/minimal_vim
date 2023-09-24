@@ -92,7 +92,7 @@ set wildmode=list:full
 set cursorline
 
 " Set a ruler at column 80, see https://stackoverflow.com/q/2447109/6064933
-"set colorcolumn=80
+set colorcolumn=80
 
 " Minimum lines to keep above and below cursor when scrolling
 set scrolloff=15
@@ -364,6 +364,8 @@ augroup number_toggle
 augroup END
 "}
 
+
+
 " save fold(s) and load folds automatically
 " autocmd BufWinLeave *.* mkview !
 " autocmd BufWinEnter *.* silent loadview
@@ -595,7 +597,7 @@ function! MyHighlights() abort
     hi SignColumn guifg=#C0CAF5 guibg=NONE gui=NONE
     hi VertSplit guifg=#9BF6FF guibg=NONE gui=NONE
 
-    hi ColorColumn guifg=NONE guibg=#323C4E gui=NONE
+    hi ColorColumn guifg=NONE ctermbg=235 gui=NONE
     hi Comment ctermfg=243 guibg=NONE gui=italic
     hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
     hi Error guifg=#FF8080 guibg=#1F262D gui=bold,reverse
