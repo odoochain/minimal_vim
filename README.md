@@ -7,7 +7,7 @@ light-weight and ready-to-use Vim config for quick editing.
 The config is tested in Vim 9 and Nvim 0.8.0.
 
 <p align="center">
-<img src="resources/vim_ui_look.jpg" width="600">
+<img src="resources/vim_ui_look.png" width="600">
 </p>
 
 # Feature
