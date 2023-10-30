@@ -605,19 +605,19 @@ function! MyHighlights() abort
     hi VertSplit guifg=#9BF6FF guibg=NONE gui=NONE
 
     hi ColorColumn guifg=NONE ctermbg=235 gui=NONE
-    hi Comment ctermfg=243 guibg=NONE gui=italic
     hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
+    hi Comment ctermfg=0 guibg=NONE gui=italic
     hi Error guifg=#FF8080 guibg=#1F262D gui=bold,reverse
     hi ErrorMsg guifg=#1F262D guibg=#FF8080 gui=bold
     hi Folded guifg=#C0CAF5 guibg=#323C4E gui=italic
-    hi LineNr ctermfg=243 ctermbg=NONE cterm=NONE
+    hi LineNr ctermfg=black ctermbg=NONE cterm=NONE
     hi MatchParen guifg=NONE guibg=#9BF6FF gui=bold
-    hi NonText ctermfg=243 guibg=NONE gui=NONE
+    hi NonText ctermfg=black guibg=NONE gui=NONE
     hi Pmenu guifg=#C0CAF5 guibg=#4B5263 gui=NONE
     hi PmenuSbar guifg=NONE guibg=#4B5263 gui=NONE
     hi PmenuSel guifg=#4B5263 guibg=#6A1E90 gui=bold
     hi PmenuThumb guifg=NONE guibg=#AEB2BE gui=NONE
-    hi SpecialKey ctermfg=243 guibg=NONE gui=NONE
+    hi SpecialKey ctermfg=black guibg=NONE gui=NONE
     hi StatusLine guifg=#4B5263 guibg=#C0CAF5 gui=reverse
     hi StatusLineNC guifg=#323C4E guibg=#FFB84D gui=reverse
     hi TabLine guifg=#AEB2BE guibg=#4B5263 gui=NONE
@@ -634,9 +634,9 @@ function! MyHighlights() abort
     hi DiffDelete guifg=#FF8080 guibg=#1F262D gui=reverse
     hi DiffText guifg=#E5E1BA guibg=#1F262D gui=reverse
     hi Directory guifg=#8C4FEB guibg=NONE gui=bold
-    hi EndOfBuffer ctermfg=black ctermbg=NONE gui=NONE
+    hi EndOfBuffer ctermfg=235 ctermbg=NONE gui=NONE
 "    hi EndOfBuffer guifg=#1F262D guibg=NONE gui=NONE
-"    highlight EndOfBuffer ctermfg=#1F262D ctermbg=#1F262D
+"    hi EndOfBuffer ctermfg=#1F262D ctermbg=#1F262D
     hi IncSearch guifg=#FA8680 guibg=#1F262D gui=reverse
     hi ModeMsg guifg=#E5E1BA guibg=NONE gui=bold
     hi MoreMsg guifg=#E5E1BA guibg=NONE gui=bold
