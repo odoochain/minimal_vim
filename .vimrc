@@ -566,6 +566,13 @@ nnoremap <right> :echoerr "Don't use arrow keys, use H, J, K, L instead!"<CR>
 nnoremap <left> :echoerr "Don't use arrow keys, use H, J, K, L instead!"<CR>
 "}
 
+
+
+
+
+
+
+
 "{ UI settings
 set shortmess+=I " Hide intro message
 if !has('gui_running')
@@ -627,7 +634,9 @@ function! MyHighlights() abort
     hi DiffDelete guifg=#FF8080 guibg=#1F262D gui=reverse
     hi DiffText guifg=#E5E1BA guibg=#1F262D gui=reverse
     hi Directory guifg=#8C4FEB guibg=NONE gui=bold
-    hi EndOfBuffer guifg=#1F262D guibg=NONE gui=NONE
+    hi EndOfBuffer ctermfg=black ctermbg=NONE gui=NONE
+"    hi EndOfBuffer guifg=#1F262D guibg=NONE gui=NONE
+"    highlight EndOfBuffer ctermfg=#1F262D ctermbg=#1F262D
     hi IncSearch guifg=#FA8680 guibg=#1F262D gui=reverse
     hi ModeMsg guifg=#E5E1BA guibg=NONE gui=bold
     hi MoreMsg guifg=#E5E1BA guibg=NONE gui=bold
@@ -693,6 +702,7 @@ function! MyHighlights() abort
 
 endfunction
 
+
 if exists('&termguicolors')
     " If we want to use true colors, we must a color scheme which support true
     " colors, for example, https://github.com/sickill/vim-monokai
@@ -700,6 +710,7 @@ if exists('&termguicolors')
 endif
 set background=dark
 colorscheme slate
+
 
 " Highlight trailing white spaces and leading tabs
 if has('gui_running')
@@ -825,6 +836,7 @@ function! StatuslineTabWarning()
     return b:statusline_tab_warning
 endfunction
 "}
+
 
 "{ Some good references
 " 1. https://gist.github.com/suderman/1243665
