@@ -593,13 +593,13 @@ function! MyHighlights() abort
     " Airline theme
 
     hi User1 ctermfg=0 ctermbg=75
-    hi User2 ctermfg=75 ctermbg=0
+    hi User2 ctermfg=75 ctermbg=NONE
 
     " The following colors are taken from vim-gruvbox8,
     " link: https://github.com/lifepillar/vim-gruvbox8
 
-    hi Normal ctermfg=253 guibg=NONE gui=NONE
-    hi CursorLineNr ctermfg=253 ctermbg=NONE cterm=NONE
+    hi Normal ctermfg=250 guibg=NONE gui=NONE
+    hi CursorLineNr ctermfg=250 ctermbg=NONE cterm=NONE
     hi FoldColumn guifg=#59C2C1 guibg=NONE gui=NONE
     hi SignColumn guifg=#C0CAF5 guibg=NONE gui=NONE
     hi VertSplit guifg=#9BF6FF guibg=NONE gui=NONE
@@ -634,7 +634,7 @@ function! MyHighlights() abort
     hi DiffDelete guifg=#FF8080 guibg=#1F262D gui=reverse
     hi DiffText guifg=#E5E1BA guibg=#1F262D gui=reverse
     hi Directory guifg=#8C4FEB guibg=NONE gui=bold
-    hi EndOfBuffer ctermfg=235 ctermbg=NONE gui=NONE
+    hi EndOfBuffer ctermfg=0 ctermbg=NONE gui=NONE
 "    hi EndOfBuffer guifg=#1F262D guibg=NONE gui=NONE
 "    hi EndOfBuffer ctermfg=#1F262D ctermbg=#1F262D
     hi IncSearch guifg=#FA8680 guibg=#1F262D gui=reverse
