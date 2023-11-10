@@ -1,6 +1,7 @@
 set encoding=utf-8
 scriptencoding utf-8
 
+
 "{ Builtin optional plugins
 " Activate matchit plugin
 runtime! macros/matchit.vim
@@ -593,7 +594,7 @@ function! MyHighlights() abort
     " Airline theme
 
     hi User1 ctermfg=0 ctermbg=75
-    hi User2 ctermfg=75 ctermbg=NONE
+    hi User2 ctermfg=75 ctermbg=0
 
     " The following colors are taken from vim-gruvbox8,
     " link: https://github.com/lifepillar/vim-gruvbox8
@@ -606,7 +607,7 @@ function! MyHighlights() abort
 
     hi ColorColumn guifg=NONE ctermbg=235 gui=NONE
     hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
-    hi Comment ctermfg=0 guibg=NONE gui=italic
+    hi Comment ctermfg=239 guibg=NONE gui=italic
     hi Error guifg=#FF8080 guibg=#1F262D gui=bold,reverse
     hi ErrorMsg guifg=#1F262D guibg=#FF8080 gui=bold
     hi Folded guifg=#C0CAF5 guibg=#323C4E gui=italic
@@ -634,7 +635,7 @@ function! MyHighlights() abort
     hi DiffDelete guifg=#FF8080 guibg=#1F262D gui=reverse
     hi DiffText guifg=#E5E1BA guibg=#1F262D gui=reverse
     hi Directory guifg=#8C4FEB guibg=NONE gui=bold
-    hi EndOfBuffer ctermfg=0 ctermbg=NONE gui=NONE
+    hi EndOfBuffer ctermfg=235 ctermbg=NONE gui=NONE
 "    hi EndOfBuffer guifg=#1F262D guibg=NONE gui=NONE
 "    hi EndOfBuffer ctermfg=#1F262D ctermbg=#1F262D
     hi IncSearch guifg=#FA8680 guibg=#1F262D gui=reverse
