@@ -50,3 +50,8 @@ git clone https://github.com/odoochain/minimal_vim.git .
 Invoke-WebRequest https://raw.githubusercontent.com/odoochain/minimal_vim/master/utils/install.ps1 -UseBasicParsing | Invoke-Expression
 ```
 
+for gitee.com
+
+``` powershell
+Invoke-WebRequest https://gitee.com/odoochain/minimal_vim/raw/main/utils/update.ps1 -UseBasicParsing | Invoke-Expression
+```
