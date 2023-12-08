@@ -40,4 +40,9 @@ cp .vimrc $home/.vimrc
 **One line Install**
 ``` powershell
 Invoke-WebRequest https://raw.githubusercontent.com/mino29/minimal_vim/master/utils/install.ps1 -UseBasicParsing | Invoke-Expression
+```bash
+# to avoid default conf interfering with this conf
+mv ~/.vimrc ~/.vimrc.bak
+mkdir -p ~/.vim && cd ~/.vim
+git clone https://github.com/jdhao/minimal_vim.git .
 ```
