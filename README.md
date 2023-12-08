@@ -29,8 +29,16 @@ It's just blazingly fast(80ms startup time) with all the sane starter configs.
 
 ```bash
 mkdir -p ~/.config/nvim && cd ~/.config/nvim
-git clone https://github.com/mino29/minimal_vim.git .
+git clone https://github.com/odoochain/minimal_vim.git .
 cp .vimrc $home/.vimrc
+```
+### For Vim [see nvim-zh](https://github.com/nvim-zh/minimal_vim)
+
+```bash
+# to avoid default conf interfering with this conf
+mv ~/.vimrc ~/.vimrc.bak
+mkdir -p ~/.vim && cd ~/.vim
+git clone https://github.com/odoochain/minimal_vim.git .
 ```
 
 ## ⏹ On Windows
@@ -39,10 +47,6 @@ cp .vimrc $home/.vimrc
 
 **One line Install**
 ``` powershell
-Invoke-WebRequest https://raw.githubusercontent.com/mino29/minimal_vim/master/utils/install.ps1 -UseBasicParsing | Invoke-Expression
-```bash
-# to avoid default conf interfering with this conf
-mv ~/.vimrc ~/.vimrc.bak
-mkdir -p ~/.vim && cd ~/.vim
-git clone https://github.com/jdhao/minimal_vim.git .
+Invoke-WebRequest https://raw.githubusercontent.com/odoochain/minimal_vim/master/utils/install.ps1 -UseBasicParsing | Invoke-Expression
 ```
+
